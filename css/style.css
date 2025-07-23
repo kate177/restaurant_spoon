@@ -1,0 +1,679 @@
+*{
+   padding: 0;
+   margin: 0;
+   border: 0;
+}
+*,*:before,*:after{
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{
+   height: 100%;
+   width: 100%;
+   line-height: 1;
+   font-size: 14px;
+   color: #1E212C;
+   -ms-text-size-adjust: 100%;
+   -moz-text-size-adjust:100%;
+   -webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*__________________________*/
+body{
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+}
+.no-scroll{
+   overflow: hidden;
+     height: 100%;
+}
+.container {
+   max-width: 1200px;
+   padding: 0px 15px;
+   margin: 0 auto;
+}
+.title-selection {
+   font-weight: 700;
+   color: #000000;
+}
+.open{
+   display: flex !important;
+}
+.header {
+   padding: 22px 0px 120px;
+   background: url("../img/background.jpg") no-repeat center center;
+   background-attachment: fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover; 
+}
+
+.header__menu {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.logo{
+   display: block;
+   width: 126px;
+   height: 30px;
+   background-image: url(../img/logo.svg);
+   transition: 0.3s ease;
+}
+.logo:hover {
+   background-image: url(../img/logo-hover.svg);
+}
+
+.menu__list {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menu__link {
+   color: #FFFFFF;
+   transition: color 0.3s ease;
+}
+.menu__link:hover{
+   color: #5AB963;
+}
+.menu__item--gap{
+   margin-right: 40px;
+}
+.menu__item--dot {
+   width: 4px;
+   height: 4px;
+   background-color: #FFFFFF;
+   margin: 0px 35px;
+}
+.menu__link--frame {
+   padding: 11px 17px;
+   border: #FFFFFF solid 2px;
+   border-radius: 4px;
+   margin-left: 35px;
+   transition: border 0.3s ease;
+
+}
+.menu__link--frame:hover{
+   border-color: #5AB963;
+}
+
+.burger{
+   display: none;
+   position: relative;
+   z-index: 50;
+   align-items: center;
+   width: 30px;
+   height: 18px;
+}
+.burger span{
+   height: 2px;
+   width: 100%;
+   transform: scale(1);
+   background-color: #FFFFFF;
+}
+.burger::before, .burger::after{
+   content: '';
+   position: absolute;
+   height: 2px;
+   width: 100%;
+   background-color: #FFFFFF;
+   transform: all 0.3s easy 0s;
+}
+.burger::before{
+   top: 0;
+}
+.burger::after{
+   bottom: 0;
+}
+.burger.active{
+   position: fixed; 
+   top: 28px;        
+   right: 16px;      
+   z-index: 100;     
+}
+.burger.active span{
+   transform: scale(0);
+}
+.burger.active::before{
+   top:50%;
+   transform: rotate(-45deg) translate(0, -50%);
+}
+.burger.active::after{
+   bottom: 50%;
+   transform: rotate(45deg) translate(0, 50%);
+}
+
+.intro {
+   margin-top: 142px;
+}
+.intro__title {
+   font-weight: 700;
+   font-size: 71px;
+   line-height: 78px;
+   text-align: center;
+   letter-spacing: 1px;
+   color: #FFFFFF;
+}
+.intro__subtitle {
+   font-family: "IBM Plex Mono", monospace;
+   font-weight: 700;
+   font-size: 13px;
+   text-align: center;
+   color: #FFFFFF;
+   margin: 30px 0px 60px;
+}
+.intro__button-wrapper{
+   text-align: center;
+}
+.button {
+   display: inline-block;
+   padding: 15px 30px;
+   background-color: #5AB963;
+   border-radius: 4px;
+   font-size: 16px;
+   line-height: 30px;
+   text-align: center;
+   color: #FFFFFF;
+}
+.button:hover{
+   background: #4C9B54;
+   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.features {
+   padding: 120px 0px;
+}
+.features__title {
+   max-width: 507px;
+   font-weight: 100;
+   font-size: 24px;
+   line-height: 36px;
+   color: #999999;
+   margin-bottom: 54px;
+}
+.features__list {
+   display: flex;
+   justify-content: space-between;
+}
+.features__item {
+   max-width: 377px;
+   height: 330px;
+   border: 1px solid #F7F7F7;
+   filter: drop-shadow(0px 5px 20px rgba(0, 0, 0, 0.05));
+   padding: 51px 0px 0px 41px;
+}
+.features__img {
+   width: 60px;
+   height: 60px;
+}
+.features__subtitle {
+   font-weight: 700;
+   font-size: 16px;
+   color: #000000;
+   margin: 25px 0px 13px;
+}
+.features__text {
+   font-family: "IBM Plex Mono", monospace;
+   max-width: 272px;
+   font-size: 13px;
+   color: #999999;
+}
+
+.intro-banner {
+   padding: 0px 30px 116px;
+}
+.intro-banner__img {
+   margin: 0 auto;
+   max-width: 1380px;
+   height: 720px;
+   background: url("../img/banner.jpg") no-repeat center center;
+   background-attachment: fixed;
+   background-size: cover; 
+}
+.intro-banner__title {
+   margin: 0 auto;
+   padding: 115px 0px 6px;
+   text-align: center;
+   max-width: 685px;
+   font-weight: 100;
+   font-size: 24px;
+   line-height: 36px;
+   color: #999999;
+}
+.intro-banner__link {
+   display: block;
+   font-family: 'IBM Plex Mono';
+   font-size: 11px;
+   line-height: 18px;
+   text-align: center;
+   text-transform: uppercase;
+   color: #5AB963;
+   margin: 0 auto;
+}
+.intro-banner__link:hover{
+   text-decoration: underline;
+}
+
+.food-highlight{
+   overflow-x: hidden;
+   position: relative;
+}
+.food-highlight__line {
+   max-width: 100%;
+   height: 1px;
+   background: #E6E6E6;
+}
+.food-highlight__line--top {
+   margin-bottom: 120px;
+}
+.food-highlight__column {
+   display: flex;
+}
+.start-animation{
+   transition: all 1.8s ease;
+   opacity: 0;
+   transform: translateX(-100px);
+}
+.left-show{
+   opacity: 1;
+   transform: translateX(0);
+}
+.food-highlight__column--bottom{
+   margin-top: 90px;
+   justify-content: right;
+   transition: all 1.8s ease;
+   opacity: 0;
+   transform: translateX(100px);
+}
+.right-show{
+   opacity: 1;
+   transform: translateX(0);
+}
+.food-highlight__item--left {
+   margin-right: 100px;
+}
+.food-highlight__img {
+   max-width: 470px;
+   height: 330px;
+
+}
+.food-highlight__subtitle {
+   margin-bottom: 25px;
+   max-width: 370px;
+   font-weight: 100;
+   font-size: 24px;
+   line-height: 36px;
+   color: #999999;
+}
+.food-highlight__text {
+   max-width: 370px;
+   font-family: 'IBM Plex Mono';
+   font-size: 13px;
+   color: #999999;
+}
+.food-highlight__item--right {
+   margin-left: 100px;
+}
+
+.food-highlight__title{
+   font-weight: 700;
+   font-size: 16px;
+   text-align: center;
+   color: #000000;
+   padding: 110px 0px 12px;
+}
+.food-highlight__link {
+   display: block;
+   font-family: 'IBM Plex Mono';
+   font-size: 11px;
+   line-height: 18px;
+   text-align: center;
+   text-transform: uppercase;
+   color: #5AB963;
+}
+.food-highlight__link:hover{
+   text-decoration: underline;
+}
+.food-highlight__line--bottom {
+   margin-top: 120px;
+}
+
+.promo__wrapper {
+   margin: 150px 0px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.promo__text-row{
+   max-width: 483px;
+}
+.promo__title {
+   display: flex;
+   align-items: center;
+   margin-bottom: 15px;
+}
+.promo__title-text {
+   font-weight: 700;
+   font-size: 16px;
+   color: #5AB963;
+}
+.promo__title-img {
+   width: 30px;
+   height: 2px;
+   background-color: #5AB963;
+   margin-left: 20px;
+}
+.promo__text {
+   font-weight: 100;
+   font-size: 24px;
+   line-height: 36px;
+   color: #999999;
+}
+.promo__text--selection {
+   font-weight: 400;
+   color: #000000;
+}
+.promo__link {
+   font-weight: 700;
+}
+.footer {
+   background-color: #0A0E1A;
+   padding: 120px 0px 150px;
+}
+
+.footer__column {
+   display: flex;
+   justify-content: space-between;
+}
+
+.footer__text {
+   margin-top: 15px;
+   font-size: 12px;
+   line-height: 18px;
+   color: #666666;
+}
+.footer__column-right {
+   display: flex;
+}
+.footer__list {
+   margin-right: 50px;
+}
+
+.footer__item + .footer__item{
+   margin-top: 25px;
+}
+.footer__link{
+   font-size: 12px;
+   line-height: 18px;
+   color: #FFFFFF;
+   transition: 0.3s ease;
+}
+.footer__link:hover{
+   color: #5AB963;
+}
+.footer__item-icon {
+   display: inline-block;
+    background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   transition: 0.3s ease;
+}
+.footer__item-icon + .footer__item-icon{
+   margin-left: 20px;
+}
+.footer__link-icon{
+   display: block;
+   width: 12px;
+   height: 12px;
+}
+.fb{
+   background-image: url(../img/fb.svg);
+}
+.fb:hover{
+   background-image: url(../img/fb2.svg);
+}
+.twitter{
+   background-image: url(../img/twitter.svg);
+}
+.twitter:hover{
+   background-image: url(../img/twitter2.svg);
+}
+.inst{
+   background-image: url(../img/inst.svg);
+}
+.inst:hover{
+   background-image: url(../img/inst2.svg);
+}
+
+
+
+@media (max-width: 1024px){
+   .features__item {
+    max-width: 300px;
+    padding: 51px 10px 0px 30px;
+   }
+   .intro-banner__img {
+    height: 650px;
+   }
+}
+
+@media (max-width: 960px){
+   .header{
+      background-attachment: scroll;
+   }
+   .features__list {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+   }
+   .features__item {
+    max-width: 377px;
+    padding: 51px 0px 0px 41px;
+   }
+   .features__item:last-child{
+      margin-top: 40px;
+   }
+   .intro-banner__img {
+    height: 600px;
+    background-attachment: scroll;
+   }
+   .intro-banner__title {
+    padding: 100px 0px 6px;
+   }
+   .food-highlight__column {
+    flex-direction: column-reverse;
+   }
+   .food-highlight__item--left {
+    margin: 0 auto;
+    padding-top: 40px;
+   }
+   .food-highlight__item--right {
+    margin: 0 auto;
+    padding-bottom: 40px;
+   }
+   .food-highlight__subtitle {
+    max-width: 100%;
+   }
+   .food-highlight__text {
+      max-width: 100%;
+   }
+   .promo__wrapper {
+    margin: 100px 0px;
+   }
+}
+
+@media (max-width: 768px){
+   .burger{
+      display: flex;
+   }
+   .menu{
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      top:0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      overflow-y: auto;
+      padding: 50px 40px;
+      background-color: #1E212C;
+      animation: burgerAnimation 0.4s;
+   }
+   .menu__list{
+      flex-direction: column;
+      row-gap: 30px;
+   }
+   .menu__item--gap{
+   margin-right: 0px;
+   }
+   .menu__item--dot{
+      display: none;
+   }
+   .menu__link--frame{
+      margin-left: 0px;
+   }
+   .features__title {
+    font-size: 21px;
+   }
+   .features__item:first-child {
+        margin-bottom: 40px;
+    }
+   .intro-banner__img {
+        height: 500px;
+   }
+   .intro-banner__title {
+        padding: 90px 0px 6px;
+   }
+   .intro-banner__title {
+    font-size: 22px;
+   } 
+   .food-highlight__img {
+    max-width: 100%;
+    height: 300px;
+   }
+   .promo__wrapper {
+   display: flex;
+   flex-direction: column;
+        margin: 80px 0px;
+   }
+   .promo__text-row{
+   margin-bottom: 40px;
+   }
+   .footer{
+      padding: 80px 0px;
+   }
+   .footer__column {
+    flex-direction: column-reverse;
+   }
+   .footer__column-right {
+    flex-wrap: wrap;
+    justify-content: space-between;
+   }
+   .footer__list-icon{
+   margin-top: 40px;
+   }
+   .footer__column-left {
+    margin-top: 50px;
+   }
+}
+
+@media (max-width: 420px){
+   .intro__title {
+    font-size: 59px;
+   }
+   .intro__button {
+      padding: 10px 25px;
+   }
+   .features__item {
+        padding: 51px 25px 0px;
+    }
+   .intro-banner__title {
+        font-size: 18px;
+   }
+   .intro-banner__title {
+        padding: 80px 0px 6px;
+   } 
+   .features {
+    padding: 80px 0px;
+   }
+   .food-highlight__line--top {
+    margin-bottom: 80px;
+   }
+   .food-highlight__column--bottom {
+    margin-top: 70px;
+   }
+   .food-highlight__title {
+    padding: 80px 0px 12px;
+   }
+    .food-highlight__img {
+        height: 280px;
+    }
+   .food-highlight__line--bottom {
+    margin-top: 80px;
+   }
+   .promo__text {
+    font-size: 21px;
+   }
+   .footer__list {
+    margin-right: 32px;
+   }
+}
+
+@media (max-width: 340px){
+   .intro__title {
+        font-size: 48px;
+        line-height: 67px;
+    }
+   .features__item {
+        padding: 51px 20px 0px;
+    }
+   .features__text {
+    font-size: 12px;
+   }
+   .intro-banner__img {
+        height: 290px;
+   }
+   .intro-banner__title {
+        font-size: 14px;
+        line-height: 30px;
+        padding: 65px 0px 6px;
+   }
+   .food-highlight__subtitle {
+    font-size: 21px;
+   }
+   .food-highlight__text {
+    font-size: 12px;
+   }
+   .food-highlight__title {
+        padding: 60px 0px 12px;
+   }
+   .food-highlight__img {
+        height: 220px;
+   }
+   .footer__column-right ul:nth-of-type(3) {
+    margin-top: 25px;
+   }
+}
+
+@keyframes burgerAnimation{
+   from {opacity: 0;}
+   to {opacity: 1;}
+}
