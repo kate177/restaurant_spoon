@@ -57,8 +57,8 @@ body{
    display: flex !important;
 }
 .header {
-   height: 100vh;
-   padding: 22px 0px 0px;
+   min-height: 100vh;
+   padding: 22px 0px 20px;
    background: url("../img/background.jpg") no-repeat center center;
    background-attachment: fixed;
    -webkit-background-size: cover;

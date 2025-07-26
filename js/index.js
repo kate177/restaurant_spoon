@@ -4,6 +4,14 @@ document.querySelector(".burger").addEventListener("click", function () {
   document.body.classList.toggle("no-scroll");
 });
 
+document.querySelectorAll(".menu-burger__link").forEach((link) => {
+  link.addEventListener("click", function () {
+    document.querySelector(".menu").classList.remove("open");
+    document.body.classList.remove("no-scroll");
+    document.querySelector(".burger").classList.remove("active");
+  });
+});
+
 document.querySelector(".signIn").addEventListener("click", function () {
   document.getElementById("signIn").classList.add("open");
 });
